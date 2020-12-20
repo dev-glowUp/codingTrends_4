@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,100;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align:top;
+}
+
+:root {
+    --text:  #2b2b2b;
+    --backgroun2: #efedea; 
+    --white: #f5f6f7;
+    --black: #2b2b2b;
+    --main: #ae2dff;
+    --ornage: #ff502d;
+
+
+    /* Margin and Padding */
+    --spaceXL: 96px;
+    --spaceLG: 72px;
+    --spaceMD: 48px;
+    --spaceSM: 24px;
+    --spaceXS: 12px;
+    /* Border Radius */
+    --roundLG: 80px;
+    --roundMD: 60px;
+    --roundSM: 40px;
+    /* Box Shadow */
+    --shadow: 0 0 20px 5px rgba(0,0,0,0.06);
+    --shadowHover: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+
+
+    /* GRADIENT 1 */
+    --nav-grad-1: linear-gradient(180deg,#ff502d,#ff502d 10%,rgba(255,80,45,.5) 50%,rgba(255,80,45,.1) 80%,rgba(255,80,45,0));
+
+}
+
+body, html, button {
+    cursor: url(/cursor-gb.png) 10 10, auto !important;
+}
+
+body, html {
+    font-size: 100%;
+    line-height: 1.7;
+    font-weight: 300;
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text);
+    background-color: var(--backgroun2);
+    /* height: 100vh; */
+}
+
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+
+@keyframes all {
+    from {transform: translateX(-40%);}
+    to {transform: translateX(200vh);}
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+    /* -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; */
+
+    background: var(--nav-grad-1);
+    
+    width: 100%;
+    height: 140px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* top: -38px; */
+
+    padding: 0 var(--spaceMD);
+}
+
+.scrolling-active .nav {
+    top: -20px;
+    background-color: yellow;
+
+    background: var(--nav-grad-1);
+
+    transition: all .3s ease-in-out;
+}
+
+.nav-links > a, .nav-social > a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    margin-left: 30px;
+    text-transform: uppercase;
+
+}
+
+.nav-links > a:hover, .nav-social > a:hover {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid white;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+.hero{
+    width: 100%;
+    height: 95vh;
+    background: url("the-creative-exchange-unsplash.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 60, 0, 0.317);
+}
+
+.hero-text {
+    /* display: block; */
+    background-color: var(--ornage);
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.hero-text > h1 {
+    font-size: 50px;
+    /* display: block; */
+    color: #fff;
+}
+
+.hero-text > h2 {
+    padding-bottom: 10px;
+}
+
+.rolling-text {
+    height: 5vh;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 3000%; 
+    background-color: var(--text);
+}
+
+.scroll-left {
+    animation: moving 150s linear infinite;
+    transform: translateY(50%);
+}
+
+.scroll-left > span {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: translateY(30%);
+    line-height: 1.5;
+    
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+@keyframes moving {
+    from {transform: translateX(-40%);}
+    to {transform: translateX(200vh);}
+}
+
+/* .balance {
+    
+    background: var(--ornage);
+    padding: var(--spaceXL);
+    border-radius: var(--roundLG);
+}
+
+.summary {
+    
+    background: var(--text);
+    padding: var(--spaceXL);
+    border-radius: var(--roundLG);
+    box-shadow: var(--shadow);
+} */
+
+.demo-content{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+
+    background: #fff;
+    background-image: linear-gradient(var(--text) 1px, transparent 0),
+    linear-gradient(90deg, var(--text) 1px, transparent 0);
+    background-size: 29px 29px;
+
+    display: grid;
+    grid: repeat(6, 1fr) / repeat(6, 1fr);
+}
+
+.demo-pricing {
+    width: 100%;
+    height: 100vh;
+    border-top: 2px solid var(--text);
+
+}
+
+.footer-container {
+    width: 100vh;
+    height: 20vh;
+    background-color: var(--ornage);
+    border-top: 2px solid var(--text);
+}
