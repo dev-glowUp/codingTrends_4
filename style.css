@@ -208,10 +208,9 @@ body {
     padding: 60px;
 }
 
-.balance {
+.cookies {
     
     background: var(--ornage);
-    padding: var(--spaceXL);
     border-radius: var(--roundSM);
     grid-area: 1 / 2 / 6 / 4;
 
@@ -223,10 +222,9 @@ body {
     z-index: 1;
 }
 
-.summary {
+.dance {
     
     background: var(--text);
-    padding: var(--spaceXL);
     border-radius: var(--roundSM);
     box-shadow: var(--shadow);
     grid-area: 4 / 1 / 6 / 4;
@@ -239,10 +237,9 @@ body {
     z-index: 2;
 }
 
-.content {
+.drink {
 
     background: var(--text);
-    padding: var(--spaceXL);
     border-radius: var(--roundSM);
     box-shadow: var(--shadow);
     grid-area: 3 / 6 / 7 / 4;
@@ -257,15 +254,36 @@ body {
 }
 
 .text {
+    padding: 70px;
 
     background: var(--ornage);
-    padding: var(--spaceXL);
+
     border-radius: var(--roundSM);
     box-shadow: var(--shadow);
-    grid-area: 1 / 3 / 4 / 7;
+    grid-area: 1 / 4 / 4 / 7;
 
     z-index: 0;
+}
 
+.text > p {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color:var(--white);
+}
+
+.text > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+    background-color: var(--black);
+    padding: 5px;
+}
+
+.text > a:hover {
+    color: var(--black);
+    background-color: var(--white);
+    border-bottom: 2px solid var(--text);
 }
 
 
@@ -277,6 +295,19 @@ body {
     border-top: 2px solid var(--text);
 
 }
+
+.demo-pricing > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+/* .price-img {
+    width : 400px
+} */
 
 .footer-container {
     width: 100%;
